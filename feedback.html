@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Submitted</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <div class="header">
+            <h1>🎉 Thank You!</h1>
+            <p>Your feedback has been submitted successfully.</p>
+        </div>
+
+        <div class="feedback-box">
+            <p><strong>Name:</strong> <span id="showName"></span></p>
+            <p><strong>Email:</strong> <span id="showEmail"></span></p>
+            <p><strong>Course:</strong> <span id="showCourse"></span></p>
+            <p><strong>Feedback:</strong> <span id="showFeedback"></span></p>
+        </div>
+
+        <button onclick="window.location.href='index.html'">
+            Submit Another Feedback
+        </button>
+    </div>
+</div>
+
+<script>
+    document.getElementById("showName").textContent =
+        localStorage.getItem("studentName");
+
+    document.getElementById("showEmail").textContent =
+        localStorage.getItem("studentEmail");
+
+    document.getElementById("showCourse").textContent =
+        localStorage.getItem("studentCourse");
+
+    document.getElementById("showFeedback").textContent =
+        localStorage.getItem("studentFeedback");
+</script>
+
+</body>
+</html>
